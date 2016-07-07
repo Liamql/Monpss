@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_top_bar"
+        android:layout_alignParentTop="true"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/iv_home"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/home"
+            />
+
+        <ImageView
+            android:id="@+id/iv_pri"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:clickable="true"
+            android:src="@drawable/options_no_padding" />
+
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/iv_pri"
+            android:clickable="true"
+            android:src="@drawable/sort_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mission_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title">
+
+        <TextView
+            android:id="@+id/mission_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:text="任务名称"
+            android:textSize="26dp"
+            android:textColor="@color/colorPrimary"
+            />
+
+        <View
+            android:id="@+id/view_temp1"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_below="@id/mission_name"
+            android:background="#d6d6d6" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/high"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/mission_title"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:textSize="13dp"
+            android:textColor="@color/colorPrimary"
+            android:text="高优先级" />
+
+        <ImageView
+            android:id="@+id/button_1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/add"/>
+    </LinearLayout>
+
+    <com.example.administrator.monpss.mainChildListView
+        android:id="@+id/listView_child1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/high"
+        android:visibility="gone"
+        android:orientation="vertical" >
+    </com.example.administrator.monpss.mainChildListView>
+
+    <LinearLayout
+        android:id="@+id/normal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/high"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:textSize="13dp"
+            android:textColor="@color/colorPrimary"
+            android:text="正常" />
+
+        <ImageView
+            android:id="@+id/button_2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/add"/>
+    </LinearLayout>
+    <com.example.administrator.monpss.mainChildListView
+        android:id="@+id/listView_child2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/normal"
+        android:visibility="gone"
+        android:orientation="vertical" >
+    </com.example.administrator.monpss.mainChildListView>
+
+    <LinearLayout
+        android:id="@+id/low"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/normal"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
+            android:textSize="13dp"
+            android:textColor="@color/colorPrimary"
+            android:text="低优先级" />
+
+        <ImageView
+            android:id="@+id/button_3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/add"/>
+    </LinearLayout>
+    <com.example.administrator.monpss.mainChildListView
+        android:id="@+id/listView_child3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/low"
+        android:visibility="gone"
+        android:orientation="vertical" >
+    </com.example.administrator.monpss.mainChildListView>
+
+</RelativeLayout>

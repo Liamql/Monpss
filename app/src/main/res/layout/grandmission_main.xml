@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/grandTitle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/header_back_button_wh"/>
+        <TextView
+            android:id="@+id/grandTitleName"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/back"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17dp"
+            android:text="子任务"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/grandInput"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/grandTitle">
+
+        <ImageView
+            android:id="@+id/grandVoice"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/icon_chat_voice"/>
+        <EditText
+            android:id="@+id/grandEdit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:hint="我想..."
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/grandAdd"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:src="@drawable/add"/>
+    </LinearLayout>
+    <com.example.administrator.monpss.mainGrandListView
+        android:id="@+id/listView_grand"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/grandInput"
+        android:orientation="vertical" >
+    </com.example.administrator.monpss.mainGrandListView>
+</RelativeLayout>
