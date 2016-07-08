@@ -19,6 +19,7 @@ import java.util.List;
 public class MainActivity extends Activity {
 
     /*git test*/
+    /*reset*/
     ExpandableListView mainlistview = null;
     ArrayList<Entity> parent = null;
     ExpandAdapter mainAdapter;
