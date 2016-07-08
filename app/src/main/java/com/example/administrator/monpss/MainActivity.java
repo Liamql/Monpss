@@ -21,7 +21,6 @@ public class MainActivity extends Activity {
     /*git test*/
     /*reset*/
     /*branch*/
-    /*666*/
     ExpandableListView mainlistview = null;
     ArrayList<Entity> parent = null;
     ExpandAdapter mainAdapter;
